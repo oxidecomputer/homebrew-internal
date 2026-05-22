@@ -5,16 +5,16 @@ class TurnstileCli < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.12/turnstile-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "687e15b8deab7cc654d37ccb142e3b8dff6effc6f4ffaf30e443ca768339e0f6"
+      sha256 "a1d2374e18370a5dfc739ead7f0550c2e85f010c5f50911e2ef0687a743b3df2"
     end
     if Hardware::CPU.intel?
       url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.12/turnstile-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "0f90b10bb58d0bd48959c884ecc56b8f4a178e145a5fc255abc91f3d8e63680a"
+      sha256 "9838f71aa6ea7491569e74fe59943889332531421b50e5c14b4537693581386d"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
     url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.12/turnstile-cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "b852db0ce96a1a512ad99f79a3aac9cb69291642a46ea663cb673188026f8db8"
+    sha256 "1c629b59e6316674d1171299e2d0a3d49b547c54d9856abd6bde2c93dde5c9a7"
   end
   license "MPL-2.0"
 
