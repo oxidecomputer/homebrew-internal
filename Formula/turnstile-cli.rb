@@ -1,20 +1,20 @@
 class TurnstileCli < Formula
   desc "Oxide Hiring CLI"
   homepage "https://github.com/oxidecomputer/turnstile"
-  version "0.9.23"
+  version "0.9.24"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.23/turnstile-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "c897db3f6a3303d3bc4ecbfb4315bd224bb90439a9303b3235a4e0c509f5a0f9"
+      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.24/turnstile-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "6845e9c94be6914362615053ad68f53dcc8325b4753f4c00318f601021324943"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.23/turnstile-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "96861d7072e9bb1e11405f2a11f23c8797bd9ff287aacbd8aeb6cb2b40f128fd"
+      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.24/turnstile-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "a4d07373806791009fe6d9c45c1de7930296c9355f07bf222d5b1f7d7055a253"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.23/turnstile-cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "9c56bed5076d3125c4230a0eb9a659e6c08aa0cfc211896ea54a6c382a88703d"
+    url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.24/turnstile-cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "5424e445a167799c66d8212b7800c50282188e9899f4014823df011506737fe6"
   end
   license "MPL-2.0"
 
