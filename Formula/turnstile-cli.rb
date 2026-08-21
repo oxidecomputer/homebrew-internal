@@ -1,20 +1,20 @@
 class TurnstileCli < Formula
   desc "Oxide Hiring CLI"
   homepage "https://github.com/oxidecomputer/turnstile"
-  version "0.9.25"
+  version "0.9.27"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.25/turnstile-cli-aarch64-apple-darwin.tar.xz"
-      sha256 "a838c400da315b6e5394cff91c7d1bd2d3b2d1c91e75d3e0701ac3bf6c99b33f"
+      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.27/turnstile-cli-aarch64-apple-darwin.tar.xz"
+      sha256 "8c18d27e6838581e0a5e24504463a362cdd5d2d59e09eeb37d9686ccd5992948"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.25/turnstile-cli-x86_64-apple-darwin.tar.xz"
-      sha256 "e340f2cbd3118f08fa2170bf570f8d521be7521ad163b7a796ca607d6dcd0988"
+      url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.27/turnstile-cli-x86_64-apple-darwin.tar.xz"
+      sha256 "660ae4a8b7565a251db0e9f287bf9c7b1c6a494f10b3cc50d5eb4ffefa6269b8"
     end
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.25/turnstile-cli-x86_64-unknown-linux-gnu.tar.xz"
-    sha256 "626ba222c6fc1d2cb2d4f9f145688c1184aecf41b048676dc467c3109eeda385"
+    url "https://github.com/oxidecomputer/turnstile/releases/download/v0.9.27/turnstile-cli-x86_64-unknown-linux-gnu.tar.xz"
+    sha256 "b4674aee03c98672a314eb0a9a634e63f357abb0146220cf40130b51d443802e"
   end
   license "MPL-2.0"
 
@@ -43,9 +43,15 @@ class TurnstileCli < Formula
   end
 
   def install
-    bin.install "turnstile-cli" if OS.mac? && Hardware::CPU.arm?
-    bin.install "turnstile-cli" if OS.mac? && Hardware::CPU.intel?
-    bin.install "turnstile-cli" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "turnstile-cli"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "turnstile-cli"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "turnstile-cli"
+    end
 
     install_binary_aliases!
     generate_completions_from_executable(
